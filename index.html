@@ -2,187 +2,190 @@
 <html lang="en">
 
 <head>
-  <title>1988044 - Ice-cream</title>
-  <!-- Required meta tags -->
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>1988044 - Ice-cream</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="css/bootstrap.min.css">
-  <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa+One" type="text/css">
+    <link rel="stylesheet" href="css/1988044.css">
 </head>
 
 <body>
-  <!--header-->
-  <header class="container">
-    <nav class="navbar navbar-expand-sm navbar-light bg-light">
-      <a class="navbar-brand" href="#">
-        <img src="images/logo.png" alt="logo">
-      </a>
-      <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId"
-        aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+    <!--header-->
+    <header class="container">
+        <nav class="navbar navbar-expand-sm navbar-light px-0">
+            <a class="navbar-brand" href="#" id="logo">
+                <img src="images/logo.png" alt="logo">
+            </a>
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="collapsibleNavId">
-        <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Menu</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Blog</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contacts</a>
-          </li>
-        </ul>
-        <form class="form-inline my-2 my-lg-0">
-          <input class="form-control mr-sm-2" type="text" placeholder="Search">
-          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-        </form>
-        <a href=""><img src="images/twitter.png" alt="twitter"></a>
-        <a href=""><img src="images/facebook.png" alt="facebook"></a>
-      </div>
-    </nav>
-  </header>
-  <!--/header-->
-  <!--banner-->
-  <div class="container-fluid">
-    <div class="container text-center">
-      <h4>Tasty cakes and ice-cream<br />for everyone</h4>
-      <div>
-        <a href="">see our menu</a>
-      </div>
-      <ul>
-        <li><span>0</span></li>
-        <li><span>1</span></li>
-        <li><span>2</span></li>
-      </ul>
+            <div class="collapse navbar-collapse justify-content-end" id="menu">
+                <ul class="navbar-nav mt-2 mt-lg-0">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Menu</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Blog</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Contacts</a>
+                    </li>
+                </ul>
+                <form class="form-inline my-2 my-lg-0" id="frm-search">
+                    <div class="input-group input-group-sm">
+                        <input class="form-control" type="text" placeholder="Search" id="searchword">
+                        <div class="input-group-append">
+                            <button class="btn" type="submit" id="btn-search"></button>
+                        </div>
+                    </div>
+                </form>
+                <div id="social">
+                    <a href="" class="btn twitter"></a>
+                    <a href="" class="btn facebook"></a>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!--/header-->
+    <!--banner-->
+    <div class="container-fluid" id="banner">
+        <div class="container text-center">
+            <h4>Tasty cakes and ice-cream<br />for everyone</h4>
+            <div>
+                <a href="#" id="btn-menu">see our menu</a>
+            </div>
+            <ul id="dots">
+                <li class="current"><span>0</span></li>
+                <li><span>1</span></li>
+                <li><span>2</span></li>
+            </ul>
+        </div>
     </div>
-  </div>
-  <!--/banner-->
-  <!--main-->
-  <div class="container">
-    <div class="row">
-      <div class="col text-center">
-        <img src="images/icon-1.png" alt="">
-        <h4>Coffee</h4>
-        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-        <a href="#">Read more</a>
-      </div>
-      <div class="col text-center">
-        <img src="images/icon-2.png" alt="">
-        <h4>Drinks</h4>
-        <div>Enim adipisci optio explicabo ipsum ab mollitia maxime?</div>
-        <a href="#">Read more</a>
-      </div>
-      <div class="col text-center">
-        <img src="images/icon-3.png" alt="">
-        <h4>Cakes</h4>
-        <div>Eligendi nemo adipisci temporibus earum, dolorem iusto et?</div>
-        <a href="#">Read more</a>
-      </div>
-      <div class="col text-center">
-        <img src="images/icon-4.png" alt="">
-        <h4>Ice-cream</h4>
-        <div>Minus quaerat aperiam cumque cupiditate rerum fugiat sit?</div>
-        <a href="#">Read more</a>
-      </div>
-    </div>
-  </div>
-  <!--/main-->
-  <!--about us-->
-  <div class="container-fluid">
+    <!--/banner-->
+    <!--main-->
     <div class="container">
-      <div class="row">
-        <div class="col-md-9">
-          <h3>About Us</h3>
-          <div>
-            <img src="images/icon-about.png" alt="icon-about" />
-            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi recusandae, voluptas voluptatum non
-              illo
-              harum explicabo omnis expedita accusamus. Omnis porro ratione enim voluptas quasi numquam, illum totam in
-              pariatur!</div>
-            <div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit molestias sint id libero assumenda
-              nulla
-              sed, fugiat reiciendis magnam voluptates. <a href="#">Read more</a></div>
-          </div>
+        <div class="row my-5">
+            <div class="col text-center">
+                <img src="images/icon-1.png" alt="">
+                <h4>Coffee</h4>
+                <div class="pb-2">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <a class="readmore" href="#">Read more</a>
+            </div>
+            <div class="col text-center">
+                <img src="images/icon-2.png" alt="">
+                <h4>Drinks</h4>
+                <div class="pb-2">Enim adipisci optio explicabo ipsum ab mollitia maxime?</div>
+                <a class="readmore" href="#">Read more</a>
+            </div>
+            <div class="col text-center">
+                <img src="images/icon-3.png" alt="">
+                <h4>Cakes</h4>
+                <div class="pb-2">Eligendi nemo adipisci temporibus earum, dolorem iusto et?</div>
+                <a class="readmore" href="#">Read more</a>
+            </div>
+            <div class="col text-center">
+                <img src="images/icon-4.png" alt="">
+                <h4>Ice-cream</h4>
+                <div class="pb-2">Minus quaerat aperiam cumque cupiditate rerum fugiat sit?</div>
+                <a class="readmore" href="#">Read more</a>
+            </div>
         </div>
-        <div class="col-md-3">
-          <form action="post">
-            <h3>Newsletter <br>Sign Up</h3>
-            <div>Please write an e-mail:</div>
-            <div><input type="email" name="e-mail" id="email" /></div>
-            <button type="submit">SIGN UP</button>
-          </form>
-        </div>
-      </div>
     </div>
-  </div>
-  <!--/about us-->
-  <!--news-->
-  <div>
-    <h3>News</h3>
-    <div class="row">
-      <div class="col">
-        <div>
-          <div>25.<br>Dec.</div>
-          <a href="#">Read more</a>
+    <!--/main-->
+    <!--about us-->
+    <div class="container-fluid about py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-9">
+                    <h3 class="text-white">About Us</h3>
+                    <div>
+                        <img src="images/icon-about.png" alt="icon-about" />
+                        <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi recusandae, voluptas voluptatum non illo harum explicabo omnis expedita accusamus. Omnis porro ratione enim voluptas quasi numquam, illum totam in pariatur!
+                        </div>
+                        <div class="pt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit molestias sint id libero assumenda nulla sed, fugiat reiciendis magnam voluptates. <a href="#">Read more</a></div>
+                    </div>
+                </div>
+                <div class="col-md-3">
+                    <form action="post" id="frm-signup">
+                        <h3>Newsletter <br>Sign Up</h3>
+                        <div>Please write an e-mail:</div>
+                        <div><input type="email" name="e-mail" id="email" /></div>
+                        <button type="submit">SIGN UP</button>
+                    </form>
+                </div>
+            </div>
         </div>
-        <div>
-          <h4>Accumsan et</h4>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-        </div>
-      </div>
-      <div class="col">
-        <div>
-          <div>25.<br>Dec.</div>
-          <a href="#">Read more</a>
-        </div>
-        <div>
-          <h4>Typi non habent</h4>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-        </div>
-      </div>
-      <div class="col">
-        <div>
-          <div>25.<br>Dec.</div>
-          <a href="#">Read more</a>
-        </div>
-        <div>
-          <h4>Claritas est etiam</h4>
-          <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-        </div>
-      </div>
     </div>
-  </div>
-  <!--/news-->
-  <!--footer-->
-  <footer>
-    <nav>
-      <ul>
-        <li><a href="#">Home</a></li>
-        <li><a href="#">About</a></li>
-        <li><a href="#">Menu</a></li>
-        <li><a href="#">Blog</a></li>
-        <li><a href="#">Contacts</a></li>
-      </ul>
-    </nav>
+    <!--/about us-->
+    <!--news-->
     <div>
-      Ice-cream &copy; 2021 | <a href="#">PRIVACY POLICY</a>
+        <h3>News</h3>
+        <div class="row">
+            <div class="col">
+                <div>
+                    <div>25.<br>Dec.</div>
+                    <a href="#">Read more</a>
+                </div>
+                <div>
+                    <h4>Accumsan et</h4>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <div>25.<br>Dec.</div>
+                    <a href="#">Read more</a>
+                </div>
+                <div>
+                    <h4>Typi non habent</h4>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+            </div>
+            <div class="col">
+                <div>
+                    <div>25.<br>Dec.</div>
+                    <a href="#">Read more</a>
+                </div>
+                <div>
+                    <h4>Claritas est etiam</h4>
+                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                </div>
+            </div>
+        </div>
     </div>
-  </footer>
-  <!--/footer-->
-  <!-- Optional JavaScript -->
-  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
-  <script src="js/jquery-3.3.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
+    <!--/news-->
+    <!--footer-->
+    <footer>
+        <nav>
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li><a href="#">Menu</a></li>
+                <li><a href="#">Blog</a></li>
+                <li><a href="#">Contacts</a></li>
+            </ul>
+        </nav>
+        <div>
+            Ice-cream &copy; 2021 | <a href="#">PRIVACY POLICY</a>
+        </div>
+    </footer>
+    <!--/footer-->
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </body>
 
 </html>
