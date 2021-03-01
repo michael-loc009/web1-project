@@ -12,6 +12,7 @@
     <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Changa+One" type="text/css">
     <link rel="stylesheet" href="css/1988044.css">
+    <link rel="stylesheet" href="css/banner.css">
 </head>
 
 <body>
@@ -22,24 +23,24 @@
                 <img src="images/logo.png" alt="logo">
             </a>
             <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+                <span class="navbar-toggler-icon"></span>
+            </button>
             <div class="collapse navbar-collapse justify-content-end" id="menu">
                 <ul class="navbar-nav mt-2 mt-lg-0">
                     <li class="nav-item active">
-                        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                        <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">About</a>
+                        <a class="nav-link" href="about.html">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Menu</a>
+                        <a class="nav-link" href="menu.html">Menu</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Blog</a>
+                        <a class="nav-link" href="blog.html">Blog</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Contacts</a>
+                        <a class="nav-link" href="contacts.html">Contacts</a>
                     </li>
                 </ul>
                 <form class="form-inline my-2 my-lg-0" id="frm-search">
@@ -61,7 +62,7 @@
     <!--banner-->
     <div class="container-fluid" id="banner">
         <div class="container text-center">
-            <h4>Tasty cakes and ice-cream<br />for everyone</h4>
+            <h4 class="text-white">Tasty cakes and ice-cream<br />for everyone</h4>
             <div>
                 <a href="#" id="btn-menu">see our menu</a>
             </div>
@@ -113,7 +114,7 @@
                         <img src="images/icon-about.png" alt="icon-about" />
                         <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi recusandae, voluptas voluptatum non illo harum explicabo omnis expedita accusamus. Omnis porro ratione enim voluptas quasi numquam, illum totam in pariatur!
                         </div>
-                        <div class="pt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit molestias sint id libero assumenda nulla sed, fugiat reiciendis magnam voluptates. <a href="#">Read more</a></div>
+                        <div class="pt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit molestias sint id libero assumenda nulla sed, fugiat reiciendis magnam voluptates. <a class="readmore" href="#">Read more</a></div>
                     </div>
                 </div>
                 <div class="col-md-3">
@@ -129,55 +130,61 @@
     </div>
     <!--/about us-->
     <!--news-->
-    <div>
+    <div class="container py-5">
         <h3>News</h3>
         <div class="row">
             <div class="col">
-                <div>
-                    <div>25.<br>Dec.</div>
-                    <a href="#">Read more</a>
-                </div>
-                <div>
-                    <h4>Accumsan et</h4>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
-                </div>
-            </div>
-            <div class="col">
-                <div>
-                    <div>25.<br>Dec.</div>
-                    <a href="#">Read more</a>
-                </div>
-                <div>
-                    <h4>Typi non habent</h4>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="date">25.<br>Dec.</div>
+                        <a class="readmore" href="#">Read more</a>
+                    </div>
+                    <div class="col-sm-8">
+                        <h4>Accumsan et</h4>
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
                 </div>
             </div>
             <div class="col">
-                <div>
-                    <div>25.<br>Dec.</div>
-                    <a href="#">Read more</a>
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="date">25.<br>Dec.</div>
+                        <a class="readmore" href="#">Read more</a>
+                    </div>
+                    <div class="col-sm-8">
+                        <h4>Typi non habent</h4>
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
                 </div>
-                <div>
-                    <h4>Claritas est etiam</h4>
-                    <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+            </div>
+            <div class="col">
+                <div class="row">
+                    <div class="col-sm-4">
+                        <div class="date">25.<br>Dec.</div>
+                        <a class="readmore" href="#">Read more</a>
+                    </div>
+                    <div class="col-sm-8">
+                        <h4>Claritas est etiam</h4>
+                        <div>Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+                    </div>
                 </div>
             </div>
         </div>
     </div>
     <!--/news-->
     <!--footer-->
-    <footer>
+    <footer class="container-fluid">
         <nav>
             <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#">About</a></li>
-                <li><a href="#">Menu</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">Contacts</a></li>
+                <li class="active"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="blog.html">Blog</a></li>
+                <li><a href="contacts.html">Contacts</a></li>
             </ul>
         </nav>
         <div>
-            Ice-cream &copy; 2021 | <a href="#">PRIVACY POLICY</a>
+            Ice-cream &copy; 2021 | <a class="text-uppercase" href="#">PRIVACY POLICY</a>
         </div>
     </footer>
     <!--/footer-->
