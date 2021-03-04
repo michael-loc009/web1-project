@@ -271,3 +271,57 @@ footer nav .active a {
 .img-rounded {
     border-radius: 1em;
 }
+
+
+/* blog page */
+
+.list {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.list li {
+    padding-bottom: 10px;
+    padding-left: 24px;
+    background: url(../images/marker1.png) 0 4px no-repeat;
+}
+
+.list a {
+    color: #7c7c7c;
+    text-decoration: none;
+}
+
+.list a:hover {
+    color: #73c926;
+}
+
+.blog,
+.clearfix {
+    clear: both;
+}
+
+.frm-comment {
+    font-size: 0.75em;
+}
+
+button[type="submit"].btn-link {
+    text-decoration: underline;
+}
+
+hr {
+    border-top: 1px solid #000 !important;
+}
+
+.comment {
+    margin-right: 20px;
+    margin-left: 20px;
+    margin-bottom: 30px;
+}
+
+.head {
+    margin-bottom: 10px;
+}
+
+.user {
+    margin-right: 10px;
+}
