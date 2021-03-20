@@ -63,51 +63,9 @@
         <h3 class="text-dark">Menu</h3>
         <div class="font-weight-bold">Filter by category:</div>
         <ul class="nav justify-content-left" id="gallery-categories">
-            <li class="nav-item">
-                <a class="nav-link disabled pl-0" href="#">Show all</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">First Category</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Second Category</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="#">Third Category</a>
-            </li>
-        </ul>
-        <div class="row">
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <img class="img-thumbnail" src="images/gallery/gallery-img1.jpg" alt="">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <img class="img-thumbnail" src="images/gallery/gallery-img2.jpg" alt="">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <img class="img-thumbnail" src="images/gallery/gallery-img3.jpg" alt="">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <img class="img-thumbnail" src="images/gallery/gallery-img4.jpg" alt="">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <img class="img-thumbnail" src="images/gallery/gallery-img5.jpg" alt="">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <img class="img-thumbnail" src="images/gallery/gallery-img6.jpg" alt="">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <img class="img-thumbnail" src="images/gallery/gallery-img7.jpg" alt="">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <img class="img-thumbnail" src="images/gallery/gallery-img8.jpg" alt="">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <img class="img-thumbnail" src="images/gallery/gallery-img9.jpg" alt="">
-            </div>
-            <div class="col-sm-6 col-md-4 col-lg-3">
-                <img class="img-thumbnail" src="images/gallery/gallery-img10.jpg" alt="">
-            </div>
 
+        </ul>
+        <div class="row" id="gallery">
         </div>
     </div>
     <!--footer-->
@@ -131,6 +89,45 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="js/handlebars-v4.7.7.js"></script>
+
+    <script id="gallery-categories-template" type="text/x-handlebars-template">
+        <li class="nav-item">
+            <a class="nav-link disabled pl-0" href="#" onclick="loadGallery(this)">Show all</a>
+        </li>
+        {{#each data}}
+        <li class="nav-item">
+            <a class="nav-link" href="#" onclick="loadGallery(this,{{id}})">{{name}}</a>
+        </li>
+        {{/each}}
+    </script>
+
+    <script id="gallery-template" type="text/x-handlebars-template">
+        {{#each data}}
+        <div class="col-sm-6 col-md-4 col-lg-3">
+            <img class="img-thumbnail" src="{{imagepath}}" alt="{{name}}">
+        </div>
+        {{/each}}
+    </script>
+
+    <script src="js/1988044.js"></script>
+    <script>
+        $(document).ready(function() {
+
+            loadData("gallery-categories", "#gallery-categories", "#gallery-categories-template");
+            loadData("gallery", "#gallery", "#gallery-template");
+        });
+
+        function loadGallery(link, id) {
+            if (id) {
+                loadData(`gallery/categories/${id}`, "#gallery", "#gallery-template")
+            } else {
+                loadData("gallery", "#gallery", "#gallery-template");
+            }
+            $("#gallery-categories .nav-link").removeClass("disabled");
+            $(link).addClass("disabled");
+        }
+    </script>
 </body>
 
 </html>
