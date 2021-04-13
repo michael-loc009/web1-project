@@ -100,10 +100,12 @@
                         </div>
                     </div>
                     <div class="col-md-3">
-                        <form action="post" id="frm-signup">
+                        <form action="post" id="frm-signup"
+                            onsubmit="window.alert('Thank you for your submission!'); return false;">
                             <h3>Newsletter <br>Sign Up</h3>
                             <div>Please write an e-mail:</div>
-                            <div><input type="email" name="e-mail" id="email" /></div>
+                            <div><input type="email" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+                                    name="e-mail" id="email" /></div>
                             <button type="submit">SIGN UP</button>
                         </form>
                     </div>
