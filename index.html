@@ -22,7 +22,8 @@
             <a class="navbar-brand" href="index.html" id="logo">
                 <img src="images/logo.png" alt="logo">
             </a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="menu">
@@ -89,9 +90,13 @@
                         <h3 class="text-white">About Us</h3>
                         <div>
                             <img src="images/icon-about.png" alt="icon-about" />
-                            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi recusandae, voluptas voluptatum non illo harum explicabo omnis expedita accusamus. Omnis porro ratione enim voluptas quasi numquam, illum totam in pariatur!
+                            <div>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eligendi recusandae, voluptas
+                                voluptatum non illo harum explicabo omnis expedita accusamus. Omnis porro ratione enim
+                                voluptas quasi numquam, illum totam in pariatur!
                             </div>
-                            <div class="pt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit molestias sint id libero assumenda nulla sed, fugiat reiciendis magnam voluptates. <a class="readmore" href="#">Read more</a></div>
+                            <div class="pt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
+                                molestias sint id libero assumenda nulla sed, fugiat reiciendis magnam voluptates. <a
+                                    class="readmore" href="#">Read more</a></div>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -136,57 +141,14 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/handlebars-v4.7.7.js"></script>
-
-    <script id="products-template" type="text/x-handlebars-template">
-        {{#each data}}
-        <div class="col text-center">
-            <img src="{{thumbpath}}" alt="">
-            <h4>{{name}}</h4>
-            <div class="pb-2">{{summary}}</div>
-            <a class="readmore" href="#" onclick="loadData('products/{{id}}', '#content', '#details-template')">Read more</a>
-        </div>
-        {{/each}}
-    </script>
-
-    <script id="news-template" type="text/x-handlebars-template">
-        {{#each data}}
-        <div class="col">
-            <div class="row">
-                <div class="col-sm-4">
-                    <div class="date">{{date}}</div>
-                    <a class="readmore" href="#" onclick="loadData('news/{{id}}', '#content', '#details-template')">Read more</a>
-                </div>
-                <div class="col-sm-8">
-                    <h4>{{name}}</h4>
-                    <div>{{summary}}</div>
-                </div>
-            </div>
-        </div>
-        {{/each}}
-    </script>
-
-    <script id="details-template" type="text/x-handlebars-template">
-        <!--small-banner-->
-        <div class="container-fluid" id="small-banner">
-
-        </div>
-        <!--/small-banner-->
-        <!--details-->
-        {{#each data}}
-        <div class="container py-5">
-            <h3 class="text-dark">{{name}}</h3>
-            <div>{{{description}}}</div>
-        </div>
-        {{/each}}
-        <!--/details-->
-    </script>
+    <script src="js/handlebars.runtime-v4.7.7.js"></script>
+    <script src="js/templates.js"></script>
     <script src="js/1988044.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
-            loadData("products", "#products", "#products-template");
-            loadData("news", "#news", "#news-template");
+            loadData("products", "#products", "index-products");
+            loadData("news", "#news", "index-news");
         });
     </script>
 </body>

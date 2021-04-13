@@ -21,7 +21,8 @@
             <a class="navbar-brand" href="index.html" id="logo">
                 <img src="images/logo.png" alt="logo">
             </a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="menu">
@@ -109,87 +110,16 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/handlebars-v4.7.7.js"></script>
-
-    <script id="aboutus-template" type="text/x-handlebars-template">
-        {{#each data}}
-        <h3 class="text-dark">About Us</h3>
-        <img class="round-img" src="{{thumbpath}}" alt="about-us-{{id}}" /> {{{summary}}}
-        <p>
-            <a href="#" class="readmore" onclick="loadData('aboutus/{{id}}', '#content', '#details-template')">Read more</a>
-        </p>
-        {{/each}}
-    </script>
-
-    <script id="visions-template" type="text/x-handlebars-template">
-        <h3 class="text-dark">Our Vision</h3>
-        {{#each data}}
-        <div class="row">
-            <div class="col-sm-4">
-                <a href="#" onclick="loadData('visions/{{id}}', '#content', '#details-template')">
-                    <img class="round-img" src="{{thumbpath}}" alt="vision-{{id}}" />
-                </a>
-            </div>
-            <div class="col-sm-8">
-                <a href="#" onclick="loadData('visions/{{id}}', '#content', '#details-template')">
-                    <h4 class="my-0 py-0">{{name}}</h4>
-                </a>
-                <p>{{summary}}</p>
-            </div>
-        </div>
-        {{/each}}
-    </script>
-
-    <script id="testimonials-template" type="text/x-handlebars-template">
-        <h3 class="text-white">Testimonials</h3>
-        <div class="row">
-            {{#each data}}
-            <div class="col">
-                <p>{{summary}}</p>
-                <div class="text-white">{{name}}</div>
-                <a href="mailto:{{email}}">{{email}}</a>
-            </div>
-            {{/each}}
-        </div>
-    </script>
-
-    <script id="team-template" type="text/x-handlebars-template">
-        {{#each data}}
-        <div class="col-md-3">
-            <a href="#" onclick="loadData('team/{{id}}', '#content', '#details-template')">
-                <img class="img-rounded" src="{{thumbpath}}" alt="team-{{id}}" />
-            </a>
-            <p class="text-dark font-weight-bold pt-3 ">{{name}}</p>
-            <p>{{summary}}</p>
-        </div>
-        {{/each}}
-    </script>
-
-    <script id="details-template" type="text/x-handlebars-template">
-        <!--small-banner-->
-        <div class="container-fluid" id="small-banner">
-        </div>
-        <!--/small-banner-->
-        <!--details-->
-        {{#each data}}
-        <div class="container py-5 mb-5">
-            <h3 class="text-dark">{{name}}</h3>
-            <div>
-                <img class="round-img pull-left" src="{{imagepath}}" /> {{{description}}}
-            </div>
-        </div>
-        {{/each}}
-        <!--/details-->
-    </script>
-
+    <script src="js/handlebars.runtime-v4.7.7.js"></script>
+    <script src="js/templates.js"></script>
     <script src="js/1988044.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
-            loadData("aboutus", "#aboutus", "#aboutus-template");
-            loadData("visions", "#visions", "#visions-template");
-            loadData("testimonials", "#testimonials", "#testimonials-template");
-            loadData("team", "#team", "#team-template");
+            loadData("aboutus", "#aboutus", "about-aboutus");
+            loadData("visions", "#visions", "about-visions");
+            loadData("testimonials", "#testimonials", "about-testimonials");
+            loadData("team", "#team", "about-team");
         });
     </script>
 </body>

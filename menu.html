@@ -21,7 +21,8 @@
             <a class="navbar-brand" href="index.html" id="logo">
                 <img src="images/logo.png" alt="logo">
             </a>
-            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#menu"
+                aria-controls="menu" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-end" id="menu">
@@ -89,40 +90,21 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/handlebars-v4.7.7.js"></script>
-
-    <script id="gallery-categories-template" type="text/x-handlebars-template">
-        <li class="nav-item">
-            <a class="nav-link disabled pl-0" href="#" onclick="loadGallery(this)">Show all</a>
-        </li>
-        {{#each data}}
-        <li class="nav-item">
-            <a class="nav-link" href="#" onclick="loadGallery(this,{{id}})">{{name}}</a>
-        </li>
-        {{/each}}
-    </script>
-
-    <script id="gallery-template" type="text/x-handlebars-template">
-        {{#each data}}
-        <div class="col-sm-6 col-md-4 col-lg-3">
-            <img class="img-thumbnail" src="{{imagepath}}" alt="{{name}}">
-        </div>
-        {{/each}}
-    </script>
-
+    <script src="js/handlebars.runtime-v4.7.7.js"></script>
+    <script src="js/templates.js"></script>
     <script src="js/1988044.js"></script>
     <script>
-        $(document).ready(function() {
+        $(document).ready(function () {
 
-            loadData("gallery-categories", "#gallery-categories", "#gallery-categories-template");
-            loadData("gallery", "#gallery", "#gallery-template");
+            loadData("gallery-categories", "#gallery-categories", "menu-gallery-categories");
+            loadData("gallery", "#gallery", "menu-gallery");
         });
 
         function loadGallery(link, id) {
             if (id) {
-                loadData(`gallery/categories/${id}`, "#gallery", "#gallery-template")
+                loadData(`gallery/categories/${id}`, "#gallery", "menu-gallery")
             } else {
-                loadData("gallery", "#gallery", "#gallery-template");
+                loadData("gallery", "#gallery", "menu-gallery");
             }
             $("#gallery-categories .nav-link").removeClass("disabled");
             $(link).addClass("disabled");
