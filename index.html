@@ -44,7 +44,8 @@
                         <a class="nav-link" href="contacts.html">Contacts</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0" id="frm-search">
+                <form class="form-inline my-2 my-lg-0" id="frm-search"
+                    onsubmit="return searchData(this.searchword.value);">
                     <div class="input-group input-group-sm">
                         <input class="form-control" type="text" placeholder="Search" id="searchword">
                         <div class="input-group-append">
@@ -60,7 +61,12 @@
         </nav>
     </header>
     <!--/header-->
-    <div id="content">
+    <!--small banner-->
+    <div class="container-fluid" id="small-banner" style="visibility:hidden">
+    </div>
+    <!--/small banner-->
+    <!--content-->
+    <div id="content" class="py-3">
         <!--banner-->
         <div class="container-fluid" id="banner">
             <div class="container text-center">
@@ -96,7 +102,7 @@
                             </div>
                             <div class="pt-3">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Suscipit
                                 molestias sint id libero assumenda nulla sed, fugiat reiciendis magnam voluptates. <a
-                                    class="readmore" href="#">Read more</a></div>
+                                    class="readmore" href="about.html">Read more</a></div>
                         </div>
                     </div>
                     <div class="col-md-3">
@@ -122,6 +128,7 @@
         </div>
         <!--/news-->
     </div>
+    <!--content-->
     <!--footer-->
     <footer class="container-fluid">
         <nav>

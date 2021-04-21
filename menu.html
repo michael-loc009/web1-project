@@ -43,7 +43,8 @@
                         <a class="nav-link" href="contacts.html">Contacts</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0" id="frm-search">
+                <form class="form-inline my-2 my-lg-0" id="frm-search"
+                    onsubmit="return searchData(this.searchword.value);">
                     <div class="input-group input-group-sm">
                         <input class="form-control" type="text" placeholder="Search" id="searchword">
                         <div class="input-group-append">
@@ -59,8 +60,12 @@
         </nav>
     </header>
     <!--/header-->
-
-    <div class="container py-5">
+    <!--small-banner-->
+    <div class="container-fluid" id="small-banner">
+    </div>
+    <!--/small-banner-->
+    <!--content-->
+    <div id="content" class="container py-5">
         <h3 class="text-dark">Menu</h3>
         <div class="font-weight-bold">Filter by category:</div>
         <ul class="nav justify-content-left" id="gallery-categories">
@@ -69,6 +74,7 @@
         <div class="row" id="gallery">
         </div>
     </div>
+    <!--/content-->
     <!--footer-->
     <footer class="container-fluid">
         <nav>

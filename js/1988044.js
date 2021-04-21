@@ -14,3 +14,21 @@ function loadData(request, targetID, sourceID) {
         }
     });
 }
+
+function searchData(keyword) {
+    $('#content').addClass('container');
+    $('#content').addClass('py-5');
+    $('#small-banner').css('visibility', 'visible');
+    loadData(`search?keyword=${keyword}`, '#content', 'search-results');
+    return false;
+}
+
+function loadSearchDataDetails(type, id) {
+    let template = 'about-details';
+    if (['blogs', 'gallery'].includes(type)) {
+        template = `blog-blogs-details`;
+    } else if (['aboutus', 'team', 'visions', 'products'].includes(type)) {
+        template = 'about-details';
+    }
+    loadData(`${type}/${id}`, '#content', template);
+}

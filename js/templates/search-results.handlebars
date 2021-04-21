@@ -1,0 +1,17 @@
+<div class="container py-5">
+    <h3 class="text-dark">Search Results</h3>
+    {{#each data}}
+    <div class="blog py-3">
+        <h4><a href="#" onclick="loadSearchDataDetails('{{type}}', {{id}})">{{name}}</a></h4>
+        <div class="py-3">
+            {{#if thumbpath}}
+            <img src="{{thumbpath}}" alt="{{name}}" class="round-img pull-left img-thumbnail">
+            {{/if}}
+            {{summary}}
+            <br>
+            <br>
+            <a href="#" class="readmore" onclick="loadSearchDataDetails('{{type}}', {{id}})">Read more</a>
+        </div>
+    </div>
+    {{/each}}
+</div>

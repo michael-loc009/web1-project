@@ -43,7 +43,8 @@
                         <a class="nav-link" href="contacts.html">Contacts</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0" id="frm-search">
+                <form class="form-inline my-2 my-lg-0" id="frm-search"
+                    onsubmit="return searchData(this.searchword.value);">
                     <div class="input-group input-group-sm">
                         <input class="form-control" type="text" placeholder="Search" id="searchword">
                         <div class="input-group-append">
@@ -59,9 +60,12 @@
         </nav>
     </header>
     <!--/header-->
+    <!--small-banner-->
+    <div class="container-fluid" id="small-banner">
+    </div>
+    <!--/small-banner-->
+    <!--content-->
     <div id="content">
-        <div class="container-fluid" id="small-banner">
-        </div>
         <div class="container py-5">
             <div class="row">
                 <!--about-us-->
@@ -88,7 +92,7 @@
         </div>
         <!--/team-->
     </div>
-
+    <!--content-->
     <!--footer-->
     <footer class="container-fluid">
         <nav>

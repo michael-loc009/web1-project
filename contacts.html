@@ -45,7 +45,8 @@
                         <a class="nav-link" href="contacts.html">Contacts</a>
                     </li>
                 </ul>
-                <form class="form-inline my-2 my-lg-0" id="frm-search">
+                <form class="form-inline my-2 my-lg-0" id="frm-search"
+                    onsubmit="return searchData(this.searchword.value);">
                     <div class="input-group input-group-sm">
                         <input class="form-control" type="text" placeholder="Search" id="searchword">
                         <div class="input-group-append">
@@ -61,8 +62,12 @@
         </nav>
     </header>
     <!--/header-->
-
-    <div class="container py-5">
+    <!--small-banner-->
+    <div class="container-fluid" id="small-banner">
+    </div>
+    <!--/small-banner-->
+    <!--content-->
+    <div id="content" class="container py-5">
         <h3 class="text-dark">Contacts</h3>
         <div id="map" style="width: 100%;height:400px">
             <script src="js/map.js"></script>
@@ -95,8 +100,10 @@
         <div>
             <h3 class="text-dark">Miscellaneous information:</h3>
             <div>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa maiores et hic quo officiis nihil a velit
-                explicabo corrupti magnam aliquid optio reiciendis eaque, perspiciatis eum iure laborum reprehenderit
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsa maiores et hic quo officiis nihil a
+                velit
+                explicabo corrupti magnam aliquid optio reiciendis eaque, perspiciatis eum iure laborum
+                reprehenderit
                 minima.
             </div>
             <div class="font-italic text-truncate py-2">
@@ -143,6 +150,7 @@
             </form>
         </div>
     </div>
+    <!--/content-->
     <!--footer-->
     <footer class="container-fluid">
         <nav>
@@ -164,7 +172,9 @@
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/popper.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/handlebars-v4.7.7.js"></script>
+    <script src="js/handlebars.runtime-v4.7.7.js"></script>
+    <script src="js/templates.js"></script>
+    <script src="js/1988044.js"></script>
     <script>
         $(document).ready(() => {
 
